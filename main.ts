@@ -9,7 +9,7 @@ interface BankAccount {
     accountNumber: number;
     balance: number;
     withdraw(amount: number): void
-    deposti(amount: number): void
+    deposit(amount: number): void
     checkBalance(): void
 }
 
@@ -125,7 +125,7 @@ async function service() {
                         type: "number",
                         message: "Enter the amount to withdraw:"
                     })
-                    customer.account.deposit(withdrawAmount.amount);
+                    customer.account.withdraw(withdrawAmount.amount);
                     break;
                 case "Check Balance":
                     customer.account.checkBalance();
